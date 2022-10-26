@@ -1,0 +1,20 @@
+POM
+---
+
+spring web
+lambok
+Oauth2 ressource Server
+spring configuration Processor
+
+Ouvrir un terminal : 
+--------------------
+
+get ssl in terminal : openssl genrsa -out keypair.pem 2048
+openssl rsa -in keypair.pem -pubout -out public.pem
+openssl pkcs8 -topk8 -inform PEM -outform PEM -nocrypt -in keypair.pem -out private.pem
+
+
+Postman : 
+
+	post, localhost:8080/token => authorisation, Basic auth, thomas / password.
+	get, localhost:8080, Authorization, Bearer Token, mettre le token retourné pour le post
